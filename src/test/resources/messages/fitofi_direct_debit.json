@@ -1,0 +1,129 @@
+{
+  "applicationHeader": {
+    "from": {
+      "organisationIdentification": {
+        "identification": {
+          "organisationIdentification": {
+            "other": [
+              {
+                "identification": "electrum"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "to": {
+      "organisationIdentification": {
+        "identification": {
+          "organisationIdentification": {
+            "other": [
+              {
+                "identification": "corePayments"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "businessMessageIdentifier": "fiToFiCustomerDirectDebit",
+    "messageDefinitionIdentifier": "pacs.003.01.08",
+    "creationDate": "2021-09-28T07:39:25.912Z",
+    "businessService": "INBOUND_DIRECT_DEBIT_REQUEST"
+  },
+  "fiToFiCustomerDirectDebit": {
+    "groupHeader": {
+      "messageIdentification": "unique-message-id",
+      "creationDateTime": "2021-09-28T07:39:25.912Z",
+      "numberOfTransactions": 1,
+      "interbankSettlementDate": "2022-11-13",
+      "settlementInformation": {
+        "settlementMethod": "CLRG",
+        "clearingSystem": {
+          "proprietary": "ZA_DBCHECK"
+        }
+      }
+    },
+    "directDebitTransactionInformation": [
+      {
+        "paymentIdentification": {
+          "UETR": "00000000-0000-4500-8900-000000000000",
+          "endToEndIdentification": "EndToEndId01",
+          "transactionIdentification": "RRN345678912"
+        },
+        "paymentTypeInformation": {
+          "serviceLevel": [
+            {
+              "code": "NUGP"
+            }
+          ]
+        },
+        "interbankSettlementAmount": {
+          "currency": "ZAR",
+          "value": 872.02
+        },
+        "interbankSettlementDate": "2022-11-13",
+        "chargeBearer": "SLEV",
+        "directDebitTransaction": {
+          "mandtedRelatedInformation": {
+            "mandateIdentification": "Mandate123456"
+          }
+        },
+        "debtor": {
+          "name": "Debtor Name"
+        },
+        "debtorAccount": {
+          "identification": {
+            "other": {
+              "identification": "98765432101",
+              "schemeName": {
+                "proprietary": "ACCOUNT_NUMBER"
+              }
+            }
+          }
+        },
+        "debtorAgent": {
+          "financialInstitutionIdentification": {
+            "clearingSystemMemberIdentification": {
+              "clearingSystemIdentification": {
+                "code": "ZANCC"
+              },
+              "memberIdentification": "654321"
+            }
+          }
+        },
+        "creditor": {
+          "name": "Creditor Name"
+        },
+        "creditorAccount": {
+          "identification": {
+            "other": {
+              "identification": "12345678901",
+              "schemeName": {
+                "proprietary": "ACCOUNT_NUMBER"
+              }
+            }
+          },
+          "type": {
+            "code": "OTHR"
+          }
+        },
+        "creditorAgent": {
+          "financialInstitutionIdentification": {
+            "clearingSystemMemberIdentification": {
+              "clearingSystemIdentification": {
+                "code": "ZANCC"
+              },
+              "memberIdentification": "123456"
+            }
+          }
+        },
+        "remittanceInformation": {
+          "unstructured": [
+            "Customer reference"
+          ]
+        }
+      }
+    ]
+  }
+}

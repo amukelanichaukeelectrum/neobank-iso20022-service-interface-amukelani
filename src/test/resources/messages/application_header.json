@@ -1,0 +1,35 @@
+{
+  "from": {
+    "organisationIdentification": {
+      "identification": {
+        "organisationIdentification": {
+          "other": [
+            {
+              "identification": "electrum"
+            },
+            {
+              "identification": "neophyte"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "to": {
+    "organisationIdentification": {
+      "identification": {
+        "organisationIdentification": {
+          "other": [
+            {
+              "identification": "corePayments"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "businessMessageIdentifier": "fiToFiPaymentStatusReport",
+  "messageDefinitionIdentifier": "pacs.002.01.02",
+  "creationDate": "2022-02-18T07:12:34.437Z",
+  "businessService": "AUTH_STATUS_REPORT"
+}

@@ -1,0 +1,79 @@
+{
+  "statusIdentification": "identification",
+  "originalGroupInformation": {
+    "originalMessageIdentification": "10005000",
+    "originalMessageNameIdentification": "Message ID",
+    "originalCreationDateTime": "2022-02-18T07:12:34.437Z"
+  },
+  "originalInstructionIdentification": "58904000",
+  "originalEndToEndIdentification": "58904000",
+  "originalTransactionIdentification": "58904000",
+  "originalUETR": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+  "transactionStatus": "1",
+  "chargesInformation": {
+    "amount": {
+      "currency": "ZAR",
+      "value": "200"
+    },
+    "agent": {
+      "financialInstitutionIdentification": {
+        "BICFI": "BICFIZ10",
+        "clearingSystemMemberIdentification": {
+          "memberIdentification": "0123456789"
+        },
+        "LEI": "ABCDEFGHIJKLMNOPQR10",
+        "name": "neobank",
+        "postalAddress": {
+          "department": "Nedbank",
+          "subDepartment": "bank"
+        },
+        "other": {
+          "identification": "9876543210",
+          "issuer": "Electrum"
+        }
+      },
+      "branchIdentification": {
+        "identification": "2481012",
+        "LEI": "ABCDEFGHIJKLMNOPQR10",
+        "name": "Claremont",
+        "postalAddress": {
+          "department": "Home affairs"
+        }
+      }
+    },
+    "originalBusinessQuery": {
+      "messageIdentification": "abcdefghijk",
+      "messageNameIdentification": "This is a message",
+      "creationDateTime": "2022-02-18T07:12:34.437Z"
+    }
+  },
+  "acceptanceDateTime": "2022-02-18T07:12:34.437Z",
+  "accountServicerReference": "reference",
+  "clearingSystemReference": "reference",
+  "instructingAgent": {
+    "financialInstitutionIdentification": {
+      "BICFI": "BICFIZ10",
+      "clearingSystemMemberIdentification": {
+        "memberIdentification": "0123456789"
+      },
+      "LEI": "ABCDEFGHIJKLMNOPQR10",
+      "name": "neobank",
+      "postalAddress": {
+        "department": "Nedbank",
+        "subDepartment": "bank"
+      },
+      "other": {
+        "identification": "9876543210",
+        "issuer": "Electrum"
+      }
+    },
+    "branchIdentification": {
+      "identification": "2481012",
+      "LEI": "ABCDEFGHIJKLMNOPQR10",
+      "name": "Claremont",
+      "postalAddress": {
+        "department": "Home affairs"
+      }
+    }
+  }
+}

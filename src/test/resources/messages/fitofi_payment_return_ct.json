@@ -1,0 +1,168 @@
+{
+  "applicationHeader": {
+    "from": {
+      "organisationIdentification": {
+        "identification": {
+          "organisationIdentification": {
+            "other": [
+              {
+                "identification": "electrum"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "to": {
+      "organisationIdentification": {
+        "identification": {
+          "organisationIdentification": {
+            "other": [
+              {
+                "identification": "corePayments"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "businessMessageIdentifier": "fiToFiPaymentReturn",
+    "messageDefinitionIdentifier": "pacs.004.001.009",
+    "creationDate": "2021-09-28T07:39:25.912000+00:00",
+    "businessService": "OUTBOUND_RETURN"
+  },
+  "paymentReturn": {
+    "groupHeader": {
+      "messageIdentification": "unique-message-id",
+      "creationDateTime": "2021-09-28T07:39:25.912000+00:00",
+      "numberOfTransactions": "1",
+      "settlementInformation": {
+        "settlementMethod": "CLRG",
+        "clearingSystem": {
+          "proprietary": "ZA_EFT"
+        }
+      },
+      "instructingAgent": {
+        "financialInstitutionIdentification": {
+          "clearingSystemMemberIdentification": {
+            "clearingSystemIdentification": {
+              "code": "ZANCC"
+            },
+            "memberIdentification": "123456"
+          }
+        }
+      },
+      "instructedAgent": {
+        "financialInstitutionIdentification": {
+          "clearingSystemMemberIdentification": {
+            "clearingSystemIdentification": {
+              "code": "ZANCC"
+            },
+            "memberIdentification": "654321"
+          }
+        }
+      }
+    },
+    "originalGroupInformation": {
+      "originalMessageIdentification": "pacs008MessageIdentification",
+      "originalMessageNameIdentification": "pacs.008.001.05",
+      "originalCreationDateTime": "2021-09-27T00:12:34.437000+00:00"
+    },
+    "transactionInformation": [
+      {
+        "returnIdentification": "uniqueIdForReturnPayment",
+        "originalInstructionIdentification": "originalIDfromPacs008IfAny",
+        "originalEndToEndIdentification": "OrgnlEToEId01",
+        "originalTransactionIdentification": "RRN345678912",
+        "originalUETR": "319aef79-1f2b-4079-a95f-c4f4fbe5dedb",
+        "originalInterbankSettlementAmount": {
+          "currency": "ZAR",
+          "value": 872.02
+        },
+        "originalInterbankSettlementDate": "2023-02-27",
+        "returnedInterbankSettlementAmount": {
+          "currency": "ZAR",
+          "value": 872.02
+        },
+        "interbankSettlementDate": "2023-02-28",
+        "chargeBearer": "SLEV",
+        "returnReasonInformation": [
+          {
+            "reason": {
+              "code": "CUST"
+            },
+            "additionalInformation": [
+              "Return requested by customer",
+              "Not able to identify the credit"
+            ]
+          }
+        ],
+        "originalTransactionReference": {
+          "paymentTypeInformation": {
+            "localInstrument": {
+              "code": "TRF"
+            }
+          },
+          "debtor": {
+            "party": {
+              "name": "Debtor Name"
+            }
+          },
+          "debtorAccount": {
+            "identification": {
+              "other": {
+                "identification": "98765432101",
+                "schemeName": {
+                  "proprietary": "ACCOUNT_NUMBER"
+                }
+              }
+            }
+          },
+          "debtorAgent": {
+            "financialInstitutionIdentification": {
+              "clearingSystemMemberIdentification": {
+                "clearingSystemIdentification": {
+                  "code": "ZANCC"
+                },
+                "memberIdentification": "654321"
+              }
+            }
+          },
+          "creditor": {
+            "party": {
+              "name": "Creditor Name"
+            }
+          },
+          "creditorAccount": {
+            "identification": {
+              "other": {
+                "identification": "12345678901",
+                "schemeName": {
+                  "proprietary": "ACCOUNT_NUMBER"
+                }
+              }
+            }
+          },
+          "creditorAgent": {
+            "financialInstitutionIdentification": {
+              "clearingSystemMemberIdentification": {
+                "clearingSystemIdentification": {
+                  "code": "ZANCC"
+                },
+                "memberIdentification": "123456"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "supplementaryData": [
+      {
+        "placeAndName": "customerCreditTransferReturned",
+        "envelope": {
+          "additionalInformation": "Add any information added by creditor agent or creditor"
+        }
+      }
+    ]
+  }
+}

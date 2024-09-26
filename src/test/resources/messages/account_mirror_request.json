@@ -1,0 +1,115 @@
+{
+  "applicationHeader": {
+    "from": {
+      "organisationIdentification": {
+        "identification": {
+          "organisationIdentification": {
+            "other": [
+              {
+                "identification": "corePayments"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "to": {
+      "organisationIdentification": {
+        "identification": {
+          "organisationIdentification": {
+            "other": [
+              {
+                "identification": "electrum"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "businessMessageIdentifier": "accountOpeningRequest",
+    "messageDefinitionIdentifier": "acmt.007.001.04",
+    "creationDate": "2022-04-25T10:51:00.4810Z",
+    "businessService": "ACCOUNT_CACHE_REQUEST"
+  },
+  "accountOpeningRequest": {
+    "references": {
+      "messageIdentification": {
+        "identification": "e7d23b5eb4e64566b678c82734a114e4",
+        "creationDateTime": "2022-02-07T17:32:55.4430Z"
+      },
+      "processIdentification": {
+        "identification": "6e934b80c9b44509b876d6a22daf1bef",
+        "creationDateTime": "2022-02-07T17:31:55.1230Z"
+      }
+    },
+    "account": {
+      "identification": {
+        "other": {
+          "identification": 123456789,
+          "schemeName": {
+            "proprietary": "ACCOUNT_NUMBER"
+          }
+        }
+      },
+      "status": "ENAB",
+      "type": {
+        "code": "CACC"
+      },
+      "currency": "ZAR",
+      "restriction": [
+        {
+          "restrictionType": {
+            "code": "DR"
+          },
+          "validFrom": "2022-02-07T17:31:55.1230Z"
+        }
+      ]
+    },
+    "accountServicerIdentification": {
+      "financialInstitutionIdentification": {
+        "BICFI": "OMAMZAJCXXX",
+        "clearingSystemMemberIdentification": {
+          "clearingSystemIdentification": {
+            "code": "ZANCC"
+          },
+          "memberIdentification": "123456"
+        }
+      }
+    },
+    "group": [
+      {
+        "groupIdentification": "SOLE",
+        "party": [
+          {
+            "party": {
+              "name": "I LastName",
+              "identification": {
+                "privateIdentification": {
+                  "other": [
+                    {
+                      "identification": "9202204999182",
+                      "schemeName": {
+                        "code": "NIDN"
+                      }
+                    },
+                    {
+                      "identification": "A12345678",
+                      "schemeName": {
+                        "code": "CCPT"
+                      }
+                    }
+                  ]
+                }
+              },
+              "contactDetails": {
+                "name": "I LastName",
+                "mobileNumber": "+27-123456789",
+                "emailAddress": "someone@example.com"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

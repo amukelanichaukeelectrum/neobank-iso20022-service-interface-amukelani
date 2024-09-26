@@ -1,0 +1,26 @@
+{
+  "directDebitMandate": {
+    "mandateIdentification": "identification",
+    "ammendmentInformationDetails": {
+      "originalMandateIdentification": "identification",
+      "originalCreditorAgent": {
+        "financialInstitutionIdentification": {
+          "BICFI": "BICFIZ10"
+        },
+        "branchIdentification": {
+          "identification": "identification",
+          "LEI": "ABCDEFGHIJKLMNOPQR10"
+        }
+      }
+    },
+    "frequency": {
+      "pointInTime": {
+        "type": "YEAR",
+        "pointInTime": "00"
+      }
+    },
+    "reason": {
+      "code": "code"
+    }
+  }
+}

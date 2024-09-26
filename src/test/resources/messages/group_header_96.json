@@ -1,0 +1,21 @@
+{
+  "messageIdentification": "identification",
+  "creationDateTime": "2022-02-18T07:12:34.437Z",
+  "batchBooking": "false",
+  "numberOfTransactions": "4",
+  "totalInterbankSettlementAmount": {
+    "currency": "RBU",
+    "value": "1000"
+  },
+  "settlementInformation": {
+    "settlementMethod": "INDA"
+  },
+  "paymentTypeInformation": {
+    "instructionPriority": "NORM",
+    "clearingChannel": "BOOK",
+    "sequenceType": "RPRE",
+    "localInstrument": {
+      "code": "code"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "identification": {
+    "other": {
+      "identification": "98765432101",
+      "schemeName": {
+        "proprietary": "ACCOUNT_NUMBER"
+      }
+    }
+  }
+}

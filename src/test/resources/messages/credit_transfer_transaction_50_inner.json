@@ -1,0 +1,80 @@
+{
+  "paymentIdentification": {
+    "instructionIdentification": "instruction identification",
+    "endToEndIdentification": "end to end identification",
+    "transactionIdentification": "transaction identification",
+    "UETR": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "clearingSystemReference": "reference"
+  },
+  "paymentTypeInformation": {
+    "instructionPriority": "HIGH",
+    "clearingChannel": "RTGS",
+    "sequenceType": "OOFF"
+  },
+  "settlementPriority": "URGT",
+  "settlementTimeIndication": {
+    "debitDateTime": "2022-02-18T07:12:34.437Z",
+    "creditDateTime": "2022-02-18T07:12:34.437Z"
+  },
+  "settlementTimeRequest": {
+    "clsTime": "10:20:35.532Z",
+    "tillTime": "10:20:35.532Z",
+    "fromTime": "10:20:35.532Z",
+    "rejectTime": "10:20:35.532Z"
+  },
+  "chargeBearer": "SHAR",
+  "mandateRelatedInformation": {
+    "mandateIdentification": "mandate identification",
+    "electronicSignature": "signature"
+  },
+  "instructionForCreditorAgent": [
+    {
+      "code": "code",
+      "instructionInformation": "instruction"
+    }
+  ],
+  "interbankSettlementAmount": {
+    "currency": "ZAR",
+    "value": "0"
+  },
+  "creditorAgent": {
+    "financialInstitutionIdentification": {
+      "BICFI": "BICFIZ10",
+      "clearingSystemMemberIdentification": {
+        "memberIdentification": "0123456789"
+      },
+      "LEI": "ABCDEFGHIJKLMNOPQR10",
+      "name": "neobank",
+      "postalAddress": {
+        "department": "Nedbank",
+        "subDepartment": "bank"
+      },
+      "other": {
+        "identification": "9876543210",
+        "issuer": "Electrum"
+      }
+    }
+  },
+  "debtorAgent": {
+    "financialInstitutionIdentification": {
+      "BICFI": "BICFIZ10",
+      "clearingSystemMemberIdentification": {
+        "memberIdentification": "0123456789"
+      },
+      "LEI": "ABCDEFGHIJKLMNOPQR10",
+      "name": "neobank",
+      "postalAddress": {
+        "department": "Nedbank",
+        "subDepartment": "bank"
+      },
+      "other": {
+        "identification": "9876543210",
+        "issuer": "Electrum"
+      }
+    }
+  },
+  "creditor": {
+    "name": "neobank",
+    "countryOfResidence": "ZA"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "originalMessageIdentification": "0123456789",
+  "originalMessageNameIdentification": "identification",
+  "originalCreationDateTime": "2022-02-18T07:12:34.437Z",
+  "originalNumberOfTransactions": "12",
+  "originalControlSum": "5",
+  "groupStatus": "1",
+  "statusReasonInformation": [
+    {
+      "originator": {
+        "name": "name",
+        "identification": {
+          "organisationIdentification": {
+            "anyBIC": "BICFIZ10",
+            "LEI": "ABCDEFGHIJKLMNOPQR10"
+          }
+        },
+        "countryOfResidence": "ZA",
+        "contactDetails": {
+          "name": "Abdullah",
+          "phoneNumber": "+27-82-304-7002"
+        }
+      },
+      "additionalInformation": [
+        "additional",
+        "information"
+      ]
+    }
+  ],
+  "numberOfTransactionsPerStatus": [
+    {
+      "detailedNumberOfTransactions": "105",
+      "detailedStatus": "3",
+      "detailedControlSum": "89"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "interbankSettlementAmount": {
+    "currency": "ZAR",
+    "value": "200"
+  },
+  "settlementInformation": {
+    "settlementMethod": "INDA"
+  },
+  "paymentTypeInformation": {
+    "instructionPriority": "HIGH",
+    "clearingChannel": "RTGS",
+    "sequenceType": "OOFF"
+  },
+  "paymentMethod": "CHK",
+  "remittanceInformation": {
+    "unstructured": [
+      "un",
+      "struc",
+      "tured"
+    ],
+    "structured": [
+      {
+        "referredDocumentInformation": [
+          {
+            "type": {
+              "codeOrProprietary": {
+                "code": "CINV"
+              },
+              "issuer": "issuer"
+            },
+            "number": "12345",
+            "relatedDate": "2022-02-18T07:12:34.437Z",
+            "lineDetails": [
+              {
+                "identification": [
+                  {
+                    "number": "4"
+                  }
+                ],
+                "description": "description",
+                "amount": {
+                  "duePayableAmount": {
+                    "currency": "ZAR",
+                    "value": "200"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "referredDocumentAmount": {
+          "duePayableAmount": {
+            "currency": "ZAR",
+            "value": "200"
+          },
+          "creditNoteAmount": {
+            "currency": "ZAR",
+            "value": "200"
+          },
+          "adjustmentAmountAndReason": [
+            {
+              "amount": {
+                "currency": "ZAR",
+                "value": "200"
+              },
+              "creditDebitIndicator": "CRDT",
+              "reason": "1",
+              "additionalInformation": "additional Info"
+            }
+          ]
+        },
+        "creditorReferenceInformation": {
+          "type": {
+            "codeOrProprietary": {
+              "code": "DISP"
+            },
+            "issuer": "issuer"
+          },
+          "reference": "reference"
+        },
+        "taxRemittance": {
+          "creditor": {
+            "taxIdentification": "identification",
+            "registrationIdentification": "identification",
+            "taxType": "type"
+          },
+          "debtor": {
+            "taxIdentification": "identification",
+            "registrationIdentification": "identification",
+            "taxType": "type",
+            "authorisation": {
+              "title": "Mr",
+              "name": "Rager"
+            }
+          },
+          "administrationZone": "zone"
+        },
+        "garnishmentRemittance": {
+          "type": {
+            "codeOrProprietary": {
+              "proprietary": "proprietary"
+            },
+            "issuer": "issuer"
+          },
+          "familyMedicalInsuranceIndicator": "true",
+          "employeeTerminationIndicator": "true"
+        }
+      }
+    ]
+  },
+  "debtorAccount": {
+    "identification": {
+      "IBAN": "AA00A"
+    },
+    "name": "Abdullah",
+    "currency": "ZAR",
+    "proxy": {
+      "identification": "Identification"
+    }
+  }
+}
