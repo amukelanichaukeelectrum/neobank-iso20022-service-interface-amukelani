@@ -14,11 +14,10 @@
     <sonar.coverage.jacoco.xmlReportPaths>${project.reporting.outputDirectory}/jacoco-merged-test-coverage-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 
 
-    <service-interface-base-version>3.44.0</service-interface-base-version>
     <electrum.dependency.artifactory-maven-plugin.version>3.4.0
     </electrum.dependency.artifactory-maven-plugin.version>
     <mvn-openapi-generator-version>5.1.0</mvn-openapi-generator-version>
-    <electrum-openapi-generator-version>4.1.0</electrum-openapi-generator-version>
+
     <javax-servlet-api-version>3.1.0</javax-servlet-api-version>
     <testng-version>7.0.0</testng-version>
     <maven-compiler-version>3.8.1</maven-compiler-version>
@@ -59,22 +58,9 @@
       <version>${electrum.dependency.el.version}</version>
       <scope>test</scope>
     </dependency>
+
     <!-- Add the service-interface-base dependency. TODO-->
 
-    <dependency>
-      <groupId>io.electrum</groupId>
-      <artifactId>service-interface-base</artifactId>
-      <version>${service-interface-base-version}</version>
-      <type>test-jar</type>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>io.electrum</groupId>
-      <artifactId>electrum-openapi-generator</artifactId>
-      <version>${electrum-openapi-generator-version}</version>
-      <scope>test</scope>
-    </dependency>
 
     <!-- Add the Electrum OpenAPI generator dependency. TODO-->
   </dependencies>

@@ -40,6 +40,9 @@ public class TestModelUtility {
 
    }
 
+   //TODO add tests for testing the methods added
+   // use the json objects listed under resources folder
+
 
 
 }
