@@ -5,26 +5,7 @@ import java.util.UUID;
 
 import javax.validation.constraints.NotNull;
 
-import io.electrum.neobank.api.model.AccountOpeningRequestV04;
-import io.electrum.neobank.api.model.Acmt007;
-import io.electrum.neobank.api.model.CreditTransferTransaction50Inner;
-import io.electrum.neobank.api.model.DirectDebitTransactionInformation24Inner;
-import io.electrum.neobank.api.model.FIToFICustomerCreditTransferV10;
-import io.electrum.neobank.api.model.FIToFICustomerDirectDebitV08;
-import io.electrum.neobank.api.model.FIToFIPaymentStatusReportV12;
-import io.electrum.neobank.api.model.GroupHeader101;
-import io.electrum.neobank.api.model.GroupHeader90;
-import io.electrum.neobank.api.model.GroupHeader96;
-import io.electrum.neobank.api.model.MessageIdentification1;
-import io.electrum.neobank.api.model.Pacs002;
-import io.electrum.neobank.api.model.Pacs003;
-import io.electrum.neobank.api.model.Pacs004;
-import io.electrum.neobank.api.model.Pacs008;
-import io.electrum.neobank.api.model.PaymentIdentification13;
-import io.electrum.neobank.api.model.PaymentReturnV09;
-import io.electrum.neobank.api.model.PaymentTransaction112;
-import io.electrum.neobank.api.model.PaymentTransaction130;
-import io.electrum.neobank.api.model.References4;
+import io.electrum.neobank.api.model.*;
 
 public class ModelUtility {
 
@@ -66,14 +47,46 @@ public class ModelUtility {
             .map(UUID::fromString);
    }
 
-   //TODO
-//   public static String getMsgId(@NotNull Pacs008 pacs008)
-//
-//   public static String getMsgId(@NotNull Pacs003 pacs003)
-//
-//   public static String getMsgId(@NotNull Acmt007 acmt007)
-//
-//   public static Optional<UUID> getUetr(Pacs003 pacs003)
-//
-//   public static Optional<UUID> getUetr(Pacs008 pacs008)
+   public static String getMsgId(@NotNull Pacs008 pacs008){
+      return Optional.ofNullable(pacs008)
+              .map(Pacs008::getFiToFiCustomerCreditTransfer)
+              .map(FIToFICustomerCreditTransferV10::getGroupHeader)
+              .map(GroupHeader96::getMessageIdentification)
+              .orElse(null);
+   }
+   public static String getMsgId(@NotNull Pacs003 pacs003){
+      return Optional.ofNullable(pacs003)
+              .map(Pacs003::getFiToFiCustomerDirectDebit)
+              .map(FIToFICustomerDirectDebitV08::getGroupHeader)
+              .map(GroupHeader96::getMessageIdentification)
+              .orElse(null);
+   }
+  public static String getMsgId(@NotNull Acmt007 acmt007){
+     return Optional.ofNullable(acmt007)
+             .map(Acmt007::getAccountOpeningRequest)
+             .map(AccountOpeningRequestV04::getReferences)
+             .map(References4::getMessageIdentification)
+             .map(MessageIdentification1::getIdentification)
+             .orElse(null);
+  }
+
+   public static Optional<UUID> getUetr(Pacs003 pacs003){
+      return Optional.ofNullable(pacs003)
+              .map(Pacs003::getFiToFiCustomerDirectDebit)
+              .map(FIToFICustomerDirectDebitV08:: getDirectDebitTransactionInformation)
+              .map(list -> list.get(0))
+              .map(DirectDebitTransactionInformation24Inner::getPaymentIdentification)
+              .map(PaymentIdentification13::getUETR)
+              .map(UUID::fromString);
+   }
+
+   public static Optional<UUID> getUetr(Pacs008 pacs008){
+      return Optional.ofNullable(pacs008)
+              .map(Pacs008::getFiToFiCustomerCreditTransfer)
+              .map(FIToFICustomerCreditTransferV10:: getCreditTransferTransactionInformation)
+              .map(list -> list.get(0))
+              .map(CreditTransferTransaction50Inner::getPaymentIdentification)
+              .map(PaymentIdentification13::getUETR)
+              .map(UUID::fromString);
+   }
 }
