@@ -2,14 +2,10 @@ package io.electrum.neobank.api;
 
 import java.util.UUID;
 
+import io.electrum.neobank.api.model.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import io.electrum.neobank.api.model.Acmt007;
-import io.electrum.neobank.api.model.Pacs002;
-import io.electrum.neobank.api.model.Pacs003;
-import io.electrum.neobank.api.model.Pacs004;
-import io.electrum.neobank.api.model.Pacs008;
 import io.electrum.vas.JsonUtil;
 
 public class TestModelUtility {
@@ -39,9 +35,4 @@ public class TestModelUtility {
       Assert.assertEquals(ModelUtility.getMsgId(pacs004), "unique-message-id");
 
    }
-
-   //TODO add tests for testing the methods added
-   // use the json objects listed under resources folder
-
-
 }

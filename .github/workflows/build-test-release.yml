@@ -1,0 +1,19 @@
+on: [ push ]
+
+jobs:
+  build-test-release:
+    runs-on: self-hosted
+    name: Build, test, release, and analyse
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Electrum action
+        uses: electrumpayments/action-build-test-release@v2
+        with:
+          artifactory-password: ${{ secrets.ARTIFACTORY_PASSWORD }}
+          artifactory-username: ${{ secrets.ARTIFACTORY_USERNAME }}
+          artifactory-url: ${{ secrets.ARTIFACTORY_URL }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          sonarqube-api-key: ${{ secrets.SONARQUBE_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
